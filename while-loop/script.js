@@ -76,3 +76,14 @@ naturalNumSum(15);
 // 21. Print the square of each number from 1 to n.
 // 22. Print the cube of each number from 1 to n.
 // 23. Print all numbers between a and b that are divisible by 7.
+// 24. Print all factors of the given number.
+// 25. Find the sum of all factors of the given number.
+// 26. Find HCF of two numbers.
+// 27. Find LCM of two numbers.
+// 28. Find the smallest digit in a number.
+// 29. Find the largest digit in a number.
+// -------Additional Practice----------
+// 30. Count frequency of each digit in a number. 
+// 31. Check if a number is a Strong number. 
+// 32. Find GCD using the Euclidean method. 
+// 33. Check if a number is a Harshad number.
