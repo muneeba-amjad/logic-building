@@ -1,11 +1,11 @@
 // Filter Questions
 // Q1. Given an array of numbers, return a new array containing only the even numbers.
-const number = [32, 54, 17, 98, 445, 332, 12, 43, 16]
+// const number = [32, 54, 17, 98, 445, 332, 12, 43, 16]
 
-const output = number.filter((x)=>{
-  return x % 2 === 0
-})
-console.log(output)
+// const output = number.filter((x)=>{
+//   return x % 2 === 0
+// })
+// console.log(output)
 
 // Q2. Remove all falsy values (false, 0, "", null, undefined, NaN) from an array.
 const arr = [false, 0, "", null, undefined, NaN, 'Shivam', 22]
@@ -68,17 +68,35 @@ const output8 = numbers.reduce((acc, crr)=>{
 }, 0)
 console.log(output8)
 // Q9. Count how many times each element occurs in an array of strings.
-// jsconst fruits = ['apple', 'banana', 'orange', 'apple', 'banana', 'orange']
+const fruits = ['apple', 'banana', 'orange', 'apple', 'banana', 'orange']
+const output9 = fruits.reduce((acc, crr)=>{
+  acc[crr]= (acc[crr] || 0) + 1 
+  return acc
+}, {})
+console.log(output9)
 // Q10. Using reduce, find the maximum number in an array.
-// jsconst numbers = [33, 11, 65, 34, 76, 56, 2, 1044]
+const number = [33, 11, 65, 34, 76, 56, 2, 1044]
+
+const output10= number.reduce((acc, crr)=>{
+ return crr > acc ? crr : acc
+}, 0)
+console.log(output10)
 // Q11. Given an array of objects with category, group the objects by category.
-// jsconst items = [
-//   { name: 'Shirt', category: 'Clothing' },
-//   { name: 'Pants', category: 'Clothing' },
-//   { name: 'Phone', category: 'Electronics' },
-//   { name: 'Laptop', category: 'Electronics' },
-//   { name: 'Apple', category: 'Food' }
-// ]
+const items = [
+  { name: 'Shirt', category: 'Clothing' },
+  { name: 'Pants', category: 'Clothing' },
+  { name: 'Phone', category: 'Electronics' },
+  { name: 'Laptop', category: 'Electronics' },
+  { name: 'Apple', category: 'Food' }
+]
+
+const output11= items.reduce((acc,crr)=>{
+ 
+ acc[crr.category] = acc[crr.category] || []
+  acc[crr.category].push(crr)
+ return acc
+}, {})
+console.log(output11)
 //  Combined Filter + Map + Reduce Questions...................
 // Q. Given an array of products {name, price, inStock}, calculate the total price of all in-stock products.
 // Q. Given users with {name, age}, find the average age of all users older than 20.
