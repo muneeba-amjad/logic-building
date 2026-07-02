@@ -48,20 +48,77 @@
 // printTable(7)
 
 // 6. Calculate and print the sum of the first n natural numbers.
-function naturalNumSum(n) {
-  let i = 1;
-  let sum = 0;
-  while (i <= n) {
-    sum = sum + i;
-    i++
-  }
-   console.log(sum);
-}
-naturalNumSum(15);
+// function naturalNumSum(n) {
+//   let i = 1;
+//   let sum = 0;
+//   while (i <= n) {
+//     sum = sum + i;
+//     i++
+//   }
+//    console.log(sum);
+// }
+// naturalNumSum(15);
 
 // 7. Calculate the sum of all even numbers from 1 up to n.
+
+// function sumEvenNum(n) {
+//   let sum = 0;
+//   let i = 1;
+//   while (i <= n) {
+//     if (i % 2 === 0) {
+//       sum = sum + i;
+//     }
+//     i++;
+//   }
+//   return sum;
+// }
+// console.log(sumEvenNum(26));
 // 8. Calculate the sum of all odd numbers from 1 up to n.
+
+function sumOddNum(n){
+  let i=1
+  let sum=0
+  while(i<= n){
+    if (i%2 !==0){
+      sum = sum + i
+    }
+    i++
+  }
+   return sum
+}
+console.log(sumOddNum(7))
+
+// Q__. [problem description]
+
+// IN: any number 7(n)
+// OUT: sum of all odd numbers 1- 7(n)
+// REMEMBER (accumulator/starting value): 
+// i need starting value 1
+// also the sum which will be at 0 first 
+// EACH STEP: each item from 1 - n need a loop which will run and provide odd numbers
+// then these odd numbers adds up in each itteration and stors in sum 
+// when (n) is achieved the loop breaks
+// END: sum is return at the end of function
+
+// --- pseudocode ---
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+
+// --- real code ---
+function solve() {
+
+}
+
 // 9. Calculate and print the factorial of a given number.
+
+
+
 // 10. Find and print the product of all digits of a given number.
 // 11. Count and print the total number of digits in a given number.
 // 12. Reverse the given number and print the reversed value.
@@ -83,7 +140,7 @@ naturalNumSum(15);
 // 28. Find the smallest digit in a number.
 // 29. Find the largest digit in a number.
 // -------Additional Practice----------
-// 30. Count frequency of each digit in a number. 
-// 31. Check if a number is a Strong number. 
-// 32. Find GCD using the Euclidean method. 
+// 30. Count frequency of each digit in a number.
+// 31. Check if a number is a Strong number.
+// 32. Find GCD using the Euclidean method.
 // 33. Check if a number is a Harshad number.
