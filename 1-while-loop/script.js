@@ -92,7 +92,7 @@
 
 // IN: any number to get factorial
 // OUT: a single number factoral output
-// REMEMBER (accumulator/starting value): 
+// REMEMBER (accumulator/starting value):
 // yes running a loop to reach the factorail number and store value
 // the factorial initialized to one as zero initialization will return into zero output number
 // EACH STEP: loop iterates to the value suppose 7 and multiply the amount
@@ -108,26 +108,94 @@
 // increase i by 1, i++
 // return factorial
 
-function getFactorial(n){
-let i =1
-let factorial = 1
-while(i<=n){
- factorial = factorial * i
- i++
+function getFactorial(n) {
+  let i = 1;
+  let factorial = 1;
+  while (i <= n) {
+    factorial = factorial * i;
+    i++;
+  }
+  return factorial;
 }
-return factorial 
+// console.log(getFactorial(5))
+
+// 10. Find and print the product of all digits of a given number. 345 (because 3 * 4 * 5 = 60)
+
+function getProduct(n) {
+  n = Math.abs(n); // this will not take negative number
+  if (n === 0) return 0;
+  let product = 1;
+  while (n > 0) {
+    let lastdigit = n % 10; // modlous gives last digit
+    product = product * lastdigit;
+    n = Math.trunc(n / 10);
+  }
+  return product;
 }
-console.log(getFactorial(5))
-
-// 10. Find and print the product of all digits of a given number.
-
-
+console.log(getProduct(345));
 
 // 11. Count and print the total number of digits in a given number.
+
+function count(n) {
+  n = Math.abs(n);
+  if (n === 0) return 1;
+  let digitCount = 0;
+  while (n > 0) {
+    n = Math.trunc(n / 10);
+    digitCount = digitCount + 1;
+  }
+  return digitCount;
+}
+console.log(count(433567));
+
 // 12. Reverse the given number and print the reversed value.
-// 13. Check whether the given number is a palindrome.
+function reverseNum(n) {
+  n = Math.abs(n);
+  if (n === 0) return 1;
+  let reverse = 0;
+  while (n > 0) {
+    let lastdigit = n % 10;
+    reverse = reverse * 10 + lastdigit;
+    n = Math.trunc(n / 10);
+  }
+  return reverse;
+}
+console.log(reverseNum(56748));
+
+// 13. Check whether the given number is a palindrome (reads left & right same).
+
+function isPalindrom(n) {
+  if (n < 0) return false;
+
+  let orignalNum = n;
+  let reverse = 0;
+  while (n > 0) {
+    let lastdigit = n % 10;
+    reverse = reverse * 10 + lastdigit;
+    n = Math.trunc(n / 10);
+  }
+  return orignalNum === reverse;
+}
+console.log(isPalindrom(121));
+
 // 14. Find and print the sum of digits of the given number.
+function getSum(n) {
+  let sum = 0;
+  while (n > 0) {
+    let lastdigit = n % 10;
+    sum = sum + lastdigit;
+    n = Math.trunc(n / 10);
+  }
+  return sum;
+}
+console.log(getSum(345));
+
 // 15. Check whether the given number is an Armstrong number.
+// find the total digits first e.g 3
+// sperate each digit and multiply it with rais to power e.g 3
+// 153, 1^3+ 5^3+ 3^3 = 1+125+27=153
+
+
 // 16. Check whether the given number is a Perfect number.
 // 17. Print all prime numbers between 1 and 100.
 // 18. Check whether the given number is a prime number.

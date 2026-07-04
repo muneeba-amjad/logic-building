@@ -40,17 +40,48 @@ const random = Math.random() * 10
 console.log(Math.floor(random) + 1)
 
 // 9. Log Math.trunc(9.99) and compare it to Math.floor(9.99) — then try both with -9.99.
-
+console.log(Math.trunc(-9.99))
+console.log(Math.floor(-9.99))
 
 // 10. Given a number 47, log whether it's even or odd using the % operator.
+function evenOdd(n){
+return n % 2 === 0 ? "Even" : "Odd"
+}
+console.log( evenOdd(47) )
+console.log( evenOdd(20) )
 
 // ## Part 2: Math Methods in a Single Loop Line
 
 // Now use them one at a time, inside a loop, without combining logic.
 
 // 11. Loop from 1 to 10, and inside the loop log Math.floor(i / 2) for each i.
+
+function loop(){
+    let i = 0
+    while (i< 10){
+        i++
+         console.log(Math.floor(i / 2))
+    }
+    return i
+}
+loop()
+
 // 12. Loop from 1 to 20, and log only the numbers where i % 5 === 0.
+function loopOfTwenty(){
+    let i = 1
+    while (i< 20){
+        if(i%5 === 0){
+            console.log(i)
+        }
+        i++
+    }
+    return i
+}
+loopOfTwenty()
+
 // 13. Loop 10 times, and each time log a random integer between 1 and 6 (simulate a dice roll).
+
+
 // 14. Loop through the array [4.3, 7.8, 2.1, 9.9] and log the Math.round() of each value.
 // 15. Loop through the array [-3, 5, -8, 2, -1] and log the Math.abs() of each value.
 // 16. Loop from 1 to 10, and keep track of the largest number seen so far using Math.max() (without using Math.max on the whole array at once).
