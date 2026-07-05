@@ -117,7 +117,7 @@ function getFactorial(n) {
   }
   return factorial;
 }
-// console.log(getFactorial(5))
+console.log(getFactorial(5))
 
 // 10. Find and print the product of all digits of a given number. 345 (because 3 * 4 * 5 = 60)
 
@@ -195,9 +195,48 @@ console.log(getSum(345));
 // sperate each digit and multiply it with rais to power e.g 3
 // 153, 1^3+ 5^3+ 3^3 = 1+125+27=153
 
+function getArmstrong(n) {
+  let orignalnumber = n
+  let numberofCount = n;
+  let power = 0
+  while (numberofCount > 0) {
+    numberofCount = Math.trunc(numberofCount / 10);
+    power++
+  }
+  let sum = 0
+  let numofSum = n
+  while(numofSum>0){
+      let getdigit =numofSum%10
+      sum = sum + Math.pow(getdigit,power)
+      numofSum = Math.trunc(numofSum/10)
+  }
+  console.log(power)
+  return sum===orignalnumber;
+}
+console.log(getArmstrong(153));
 
 // 16. Check whether the given number is a Perfect number.
+// a positive integer that is exactly equal to sum of its proper divisors
+// 6 => 1,2,3 are divisors and 1+2+3 = 6, so 6 is perfect number 
+
+function getPerfectNum(n){
+  let i = 1
+  let divisorSum = 0
+  let sum=0
+  while(i<n){
+    if (n%i === 0){
+      console.log(i)
+      divisorSum= divisorSum+ i
+     console.log(divisorSum)
+    }
+    i++
+  }
+return divisorSum === n
+}
+console.log(getPerfectNum(28))
 // 17. Print all prime numbers between 1 and 100.
+
+
 // 18. Check whether the given number is a prime number.
 // 19. Print the Fibonacci series up to n terms.
 // 20. Find and print the sum of the Fibonacci series up to n terms.
