@@ -117,7 +117,7 @@ function getFactorial(n) {
   }
   return factorial;
 }
-console.log(getFactorial(5))
+console.log(getFactorial(5));
 
 // 10. Find and print the product of all digits of a given number. 345 (because 3 * 4 * 5 = 60)
 
@@ -196,51 +196,131 @@ console.log(getSum(345));
 // 153, 1^3+ 5^3+ 3^3 = 1+125+27=153
 
 function getArmstrong(n) {
-  let orignalnumber = n
+  let orignalnumber = n;
   let numberofCount = n;
-  let power = 0
+  let power = 0;
   while (numberofCount > 0) {
     numberofCount = Math.trunc(numberofCount / 10);
-    power++
+    power++;
   }
-  let sum = 0
-  let numofSum = n
-  while(numofSum>0){
-      let getdigit =numofSum%10
-      sum = sum + Math.pow(getdigit,power)
-      numofSum = Math.trunc(numofSum/10)
+  let sum = 0;
+  let numofSum = n;
+  while (numofSum > 0) {
+    let getdigit = numofSum % 10;
+    sum = sum + Math.pow(getdigit, power);
+    numofSum = Math.trunc(numofSum / 10);
   }
-  console.log(power)
-  return sum===orignalnumber;
+  console.log(power);
+  return sum === orignalnumber;
 }
 console.log(getArmstrong(153));
 
 // 16. Check whether the given number is a Perfect number.
 // a positive integer that is exactly equal to sum of its proper divisors
-// 6 => 1,2,3 are divisors and 1+2+3 = 6, so 6 is perfect number 
+// 6 => 1,2,3 are divisors and 1+2+3 = 6, so 6 is perfect number
 
-function getPerfectNum(n){
-  let i = 1
-  let divisorSum = 0
-  let sum=0
-  while(i<n){
-    if (n%i === 0){
-      console.log(i)
-      divisorSum= divisorSum+ i
-     console.log(divisorSum)
+function getPerfectNum(n) {
+  let i = 1;
+  let divisorSum = 0;
+  let sum = 0;
+  while (i < n) {
+    if (n % i === 0) {
+      console.log(i);
+      divisorSum = divisorSum + i;
+      console.log(divisorSum);
     }
-    i++
+    i++;
   }
-return divisorSum === n
+  return divisorSum === n;
 }
-console.log(getPerfectNum(28))
-// 17. Print all prime numbers between 1 and 100.
+console.log(getPerfectNum(28));
+// 17. Check whether the given number is a prime number.
+//  prime number can only be divided evenly by 1 and itself
 
+function checkPrimeNumber(n) {
+  if (n <= 1) return false;
+  let i = 2;
+  while (i < n) {
+    if (n % i === 0) {
+      return false;
+    }
+    i++;
+  }
+  return true;
+}
+console.log(checkPrimeNumber(13));
+console.log(checkPrimeNumber(9));
 
-// 18. Check whether the given number is a prime number.
+// 18. Print all prime numbers between 1 and 100.
+function getPrimeNumber() {
+  let i = 2;
+  //outer loop from 2-100
+  while (i <= 100) {
+    let divisor = 2;
+    let isPrime = true;
+    //inner loop if i can be divide by any samller num
+    while (divisor < i) {
+      if (i % divisor === 0) {
+        isPrime = false;
+        break;
+      }
+      divisor++;
+    }
+
+    if (isPrime) {
+      console.log(i);
+    }
+    i++;
+  }
+}
+console.log(getPrimeNumber());
+
 // 19. Print the Fibonacci series up to n terms.
+// you calculate every next term using a simple math rule: Next = Prev1 + Prev2Term 3 = 0 + 1 = 1Term 4 = 1 + 1 = 2Term 5 = 1 + 2 = 3
+
+function getFibonacci(n) {
+  let a = 0;
+  let b = 1;
+  let counter = 0;
+  while (counter <= n) {
+    console.log(counter);
+    counter = a + b;
+    a = b;
+    b = counter;
+  }
+  return counter;
+}
+console.log(getFibonacci(25));
+
 // 20. Find and print the sum of the Fibonacci series up to n terms.
+function getSumFibonacci(n) {
+  let a = 0;
+  let b = 1;
+  let counter = 0;
+  let sum = 0;
+  while (counter <= n) {
+    sum = sum + counter;
+    counter = a + b;
+    a = b;
+    b = counter;
+  }
+  return sum;
+}
+console.log(getSumFibonacci(25));
+
 // 21. Print the square of each number from 1 to n.
+
+function getSquare(n) {
+  let i = 1;
+  while (i <= n) {
+    let square = Math.pow(i, 2);
+    console.log(`Number: ${i}, Square: ${square}`);
+    i++;
+  }
+  return i;
+}
+console.log(getSquare(5));
+
 // 22. Print the cube of each number from 1 to n.
 // 23. Print all numbers between a and b that are divisible by 7.
 // 24. Print all factors of the given number.

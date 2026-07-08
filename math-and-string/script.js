@@ -1,4 +1,4 @@
-// # Math & String Method Mastery — Practice Questions
+// # Math & String Method Mastery — Practice Questions- generated via claude
 
 // Goal: get Math and String methods into muscle memory so loops stop feeling blank.
 // Order matters — do each section in sequence, don't skip to loops early.
@@ -10,6 +10,7 @@
 // Just call the method, log the result. Get the syntax automatic.
 
 // 1. Log Math.floor(7.8) and Math.ceil(7.2).
+
 console.log(Math.floor(7.8))
 console.log(Math.ceil(7.2))
 
@@ -81,6 +82,13 @@ loopOfTwenty()
 
 // 13. Loop 10 times, and each time log a random integer between 1 and 6 (simulate a dice roll).
 
+function rollDice(){
+    for(let i=1; i <=10; i++ ){
+        const random = Math.random()*6
+        console.log(Math.floor(random) +1)
+    }
+}
+rollDice()
 
 // 14. Loop through the array [4.3, 7.8, 2.1, 9.9] and log the Math.round() of each value.
 // 15. Loop through the array [-3, 5, -8, 2, -1] and log the Math.abs() of each value.
@@ -138,3 +146,5 @@ loopOfTwenty()
 // - Don't jump to Part 5 until Parts 1–4 feel automatic — that's where the "blank mind" comes from, skipping the isolation practice.
 // - For each question, before writing code, answer your own checklist: IN (what's coming in), OUT (what should print/return), REMEMBER (any running value), EACH STEP (what happens per iteration), END (what happens after the loop).
 // - Do these without looking up syntax first. If you blank, that's the signal of which specific method needs more isolated repetition — go back to that item in Part 1 or 3 and drill it alone before returning to the loop version.
+
+
