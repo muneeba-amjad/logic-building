@@ -31,7 +31,7 @@ createOrder(cart)
 })
 .then(function() {
     console.log('No matter what happens, I will get executed');
-  });
+  })
 
 function createOrder(cart){
     const myPromise = new Promise(function(resolve, reject){
