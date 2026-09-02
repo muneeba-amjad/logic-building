@@ -89,6 +89,7 @@
 // console.log(sumOddNum(7))
 
 // 9. Calculate and print the factorial of a given number.
+// like 7*6*5*4*3*2*1 this is how to get factorial of number
 
 // IN: any number to get factorial
 // OUT: a single number factoral output
@@ -97,7 +98,7 @@
 // the factorial initialized to one as zero initialization will return into zero output number
 // EACH STEP: loop iterates to the value suppose 7 and multiply the amount
 // below it on each step like  until the i is approached greater then Zero
-// like 7*6*5*4*3*2*1 this is how to get fac torial of number
+// like 7*6*5*4*3*2*1 this is how to get factorial of number
 // END: in end the factorail will be returned
 
 // --- pseudocode ---
